@@ -1,16 +1,106 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 Resume Builder
 
-Currently, two official plugins are available:
+**MIT Licensed** - Customizable React resume builder with live preview & PDF export!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Netlify-brightgreen)](https://your-resume-site.netlify.app)
 
-## React Compiler
+## ✨ **Features**
+- ✅ **Live Preview** - Edit → See instantly
+- ✅ **ATS Optimized** - Print perfect PDF
+- ✅ **3 Templates** - Classic/Compact/Modern
+- ✅ **5 Presets** - GATE, Internship, Fullstack, Campus, Minimal
+- ✅ **Toggle Sections/Skills** - Customize everything
+- ✅ **Mobile Responsive**
+- ✅ **Netlify/Vercel Deploy** (60 seconds)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 **Screenshots**
+![Resume Preview](https://via.placeholder.com/800x600/2563eb/ffffff?text=Professional+Resume)
 
-## Expanding the ESLint configuration
+## 🚀 **Quick Start**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### **1. Fork & Clone**
+```
+git clone https://github.com/BHAGYAM2004/resume-builder.git
+cd resume-builder
+npm install
+```
+
+### **2. Customize Data**
+Edit `src/resumeData.js`:
+```
+name: "Your Name",
+skills: [{id: "react", name: "React"}],
+experience: [...],
+projects: [...],
+```
+
+### **3. Preview**
+```
+npm run dev
+```
+
+### **4. Deploy (60 seconds)**
+```
+npm run build
+# Drag dist/ to netlify.com/drop
+```
+
+## 📱 **Live Templates**
+```
+🎓 GATE/Fresher - Academic focused
+💼 Internship - Experience heavy  
+🔥 Full-Stack - Tech showcase
+🏫 Campus - Balanced
+📄 Minimal - 1-page perfect
+```
+
+## 🛠 **Tech Stack**
+```
+Frontend: React + Vite + CSS Grid
+Deploy: Netlify (drag-drop)
+Build: 100% static (ATS safe)
+License: MIT (free to use!)
+```
+
+## 📄 **Print Instructions**
+1. Customize → Preview
+2. **Ctrl+P** → "More settings" → "Save as PDF"
+3. **Paper**: A4, margins 0.6in
+4. ✅ **ATS Perfect!**
+
+## 🤝 **Made by**
+**BHAGYAM2004** - B.Tech CSE-AIML | Full-Stack Developer  
+[GitHub](https://github.com/BHAGYAM2004) | [Resume](https://your-resume-site.netlify.app)
+
+## 📈 **Fork & Deploy Your Own!**
+1. Fork this repo
+2. Edit `resumeData.js` 
+3. `npm run build` → netlify.com/drop
+4. **Your resume LIVE!** 🚀
+
+---
+
+⭐ **Star if helpful!** Fork & share your resume!
+```
+
+## **🚀 DEPLOY STEPS (30 SEC)**
+
+```
+1. Copy above → Create README.md
+2. git add README.md
+3. git commit -m "Add professional README"
+4. git push
+5. npm run build → Drag dist/ to Netlify
+✅ PERFECT GitHub repo!
+```
+
+## **RESULT You'll See:**
+```
+BHAGYAM2004/resume-builder ⭐ 0
+MIT License | Live Demo badge
+🚀 Resume Builder (screenshots)
+Quick Start guide
+Made by BHAGYAM2004
+```
