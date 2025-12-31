@@ -1,10 +1,10 @@
-
+```markdown
 # 🚀 Resume Builder
 
 **MIT Licensed** - Customizable React resume builder with live preview & PDF export!
 
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Netlify-brightgreen)](https://your-resume-site.netlify.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-resume--p--builder.netlify.app-brightgreen)](https://resume-p-builder.netlify.app)
 
 ## ✨ **Features**
 - ✅ **Live Preview** - Edit → See instantly
@@ -21,7 +21,7 @@
 ## 🚀 **Quick Start**
 
 ### **1. Fork & Clone**
-```
+```bash
 git clone https://github.com/BHAGYAM2004/resume-builder.git
 cd resume-builder
 npm install
@@ -29,7 +29,7 @@ npm install
 
 ### **2. Customize Data**
 Edit `src/resumeData.js`:
-```
+```javascript
 name: "Your Name",
 skills: [{id: "react", name: "React"}],
 experience: [...],
@@ -37,12 +37,12 @@ projects: [...],
 ```
 
 ### **3. Preview**
-```
+```bash
 npm run dev
 ```
 
 ### **4. Deploy (60 seconds)**
-```
+```bash
 npm run build
 # Drag dist/ to netlify.com/drop
 ```
@@ -71,8 +71,9 @@ License: MIT (free to use!)
 4. ✅ **ATS Perfect!**
 
 ## 🤝 **Made by**
-**BHAGYAM2004** - B.Tech CSE-AIML | Full-Stack Developer  
-[GitHub](https://github.com/BHAGYAM2004) | [Resume](https://your-resume-site.netlify.app)
+**BHAGYAM2004 (Pardhu)** - B.Tech CSE-AIML | Full-Stack Developer  
+[![Portfolio](https://img.shields.io/badge/Portfolio-pardhu.web.app-blue)](https://pardhu.web.app)  
+[GitHub](https://github.com/BHAGYAM2004) | [Resume](https://resume-p-builder.netlify.app)
 
 ## 📈 **Fork & Deploy Your Own!**
 1. Fork this repo
@@ -85,22 +86,21 @@ License: MIT (free to use!)
 ⭐ **Star if helpful!** Fork & share your resume!
 ```
 
-## **🚀 DEPLOY STEPS (30 SEC)**
+## **🚀 DEPLOY (30 SEC)**
 
 ```
-1. Copy above → Create README.md
+1. Copy above → Update README.md
 2. git add README.md
-3. git commit -m "Add professional README"
+3. git commit -m "Add portfolio link pardhu.web.app"
 4. git push
 5. npm run build → Drag dist/ to Netlify
-✅ PERFECT GitHub repo!
+✅ Portfolio badge LIVE!
 ```
 
-## **RESULT You'll See:**
+## **🎉 RESULT You'll See:**
 ```
-BHAGYAM2004/resume-builder ⭐ 0
-MIT License | Live Demo badge
-🚀 Resume Builder (screenshots)
-Quick Start guide
-Made by BHAGYAM2004
+Made by BHAGYAM2004 (Pardhu)
+[Portfolio badge → pardhu.web.app] (Blue)
+GitHub | Resume links
 ```
+
