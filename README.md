@@ -1,15 +1,13 @@
-
+[
 
 ```markdown
 # 🚀 Resume Builder
 
-**MIT Licensed** | **React + Vite** | **ATS Optimized**
+**MIT Licensed** – Customizable React resume builder with live preview & PDF export!
 
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Live Demo](https://img.shields.io/badge/Demo-Resume_Builder-brightgreen)](https://resume-p-builder.netlify.app)
+[![Live Demo](https://img.shields.io/badge/Demo-resume--p--builder.netlify.app-brightgreen)](https://resume-p-builder.netlify.app)
 [![GitHub Stars](https://img.shields.io/github/stars/BHAGYAM2004/resume-builder?style=social)](https://github.com/BHAGYAM2004/resume-builder)
-
-
 ---
 
 ## ✨ Features
@@ -119,3 +117,4 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 
 ⭐ **Star if helpful!** Fork & share your resume!
 ```
+](https://github.com/BHAGYAM2004/resume-builder/edit/main/README.md)
