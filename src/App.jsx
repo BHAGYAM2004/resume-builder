@@ -1,9 +1,12 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useRef } from 'react';
 import './App.css';
-import { resumeData } from './resumeData';
+import { resumeData as defaultResumeData } from './resumeData';
 import { sectionConfig, presets, templates, getDefaultVisibleSections } from './config';
 
 const App = () => {
+  const [resumeData, setResumeData] = useState(defaultResumeData);
+  const [jsonError, setJsonError] = useState('');
+  const fileInputRef = useRef(null);
   const { main, skills, experience, education, projects } = resumeData;
   
   // Fixed initial state - AUTO-generates from data
@@ -67,6 +70,44 @@ const App = () => {
       });
     }
   }, [itemConfig]);
+
+  const handleJsonUpload = useCallback((e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setJsonError('');
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const parsed = JSON.parse(event.target.result);
+        const hasMain = parsed.main && typeof parsed.main === 'object' && parsed.main.name && parsed.main.contact;
+        const hasArrays = Array.isArray(parsed.skills) && Array.isArray(parsed.experience) && Array.isArray(parsed.projects) && Array.isArray(parsed.education);
+        const hasItems = parsed.skills.length > 0 || parsed.experience.length > 0 || parsed.projects.length > 0 || parsed.education.length > 0;
+        if (hasMain && hasArrays && hasItems) {
+          setResumeData(parsed);
+          setVisibleSections(getDefaultVisibleSections());
+          setVisibleItems({ skills: {}, experience: {}, projects: {}, education: {} });
+        } else {
+          setJsonError('Invalid format: JSON must have a main object (with name and contact) and at least one of skills, experience, projects, or education arrays.');
+        }
+      } catch {
+        setJsonError('Failed to parse JSON. Please check the file and try again.');
+      }
+    };
+    reader.onerror = () => {
+      setJsonError('Error reading file. Please try again.');
+    };
+    reader.readAsText(file);
+    // Reset input so the same file can be re-uploaded
+    e.target.value = '';
+  }, []);
+
+  const handleReset = useCallback(() => {
+    setResumeData(defaultResumeData);
+    setJsonError('');
+    setVisibleSections(getDefaultVisibleSections());
+    setVisibleItems({ skills: {}, experience: {}, projects: {}, education: {} });
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  }, []);
 
   const handlePrint = () => window.print();
 
@@ -163,6 +204,25 @@ const App = () => {
         </div>
 
         <button onClick={handlePrint} className="print-btn">👉 PDF</button>
+
+        {/* JSON Upload */}
+        <div className="control-group full-width">
+          <label>Load JSON Resume:</label>
+          <div className="json-upload-group">
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept=".json"
+              onChange={handleJsonUpload}
+              className="json-file-input"
+              id="json-upload"
+            />
+            <label htmlFor="json-upload" className="json-upload-btn">📂 Choose JSON File</label>
+            <button onClick={handleReset} className="json-reset-btn" title="Reset to default resume data">↺ Reset</button>
+            <a href="/resume-sample.json" download className="json-sample-link">⬇ Sample JSON</a>
+          </div>
+          {jsonError && <p className="json-error">{jsonError}</p>}
+        </div>
       </div>
 
       {/* Resume - UNCHANGED */}
