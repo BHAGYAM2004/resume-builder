@@ -177,6 +177,32 @@ section { margin-bottom: 40px; }
 .template-modern .skills-section, .template-modern .projects-section, .template-modern .education-section { grid-column: 1; }
 .template-modern .experience-section { grid-column: 2; }
 
+.json-upload-group {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.json-file-input { display: none; }
+.json-upload-btn {
+  display: inline-block; padding: 10px 18px; border-radius: 8px; cursor: pointer;
+  background: linear-gradient(135deg, #10b981, #059669); color: white;
+  font-size: 0.9rem; font-weight: 600; border: none; transition: all 0.2s;
+}
+.json-upload-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.json-reset-btn {
+  padding: 10px 18px; border-radius: 8px; cursor: pointer;
+  background: #f1f5f9; color: var(--primary-color); font-size: 0.9rem;
+  font-weight: 600; border: 2px solid var(--border-color); transition: all 0.2s;
+}
+.json-reset-btn:hover { background: #e2e8f0; }
+.json-error {
+  color: #dc2626; font-size: 0.85rem; font-weight: 500; margin-top: 6px;
+}
+
+.json-sample-link {
+  font-size: 0.85rem; font-weight: 600; color: var(--accent-color);
+  text-decoration: none; padding: 6px 4px;
+}
+.json-sample-link:hover { text-decoration: underline; }
+
 /* MOBILE SCREEN VIEW */
 @media screen and (max-width: 768px) {
   .App { padding: 10px; }
